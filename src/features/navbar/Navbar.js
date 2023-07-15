@@ -5,6 +5,7 @@ import {
   ShoppingCartIcon,
   XMarkIcon,
 } from "@heroicons/react/24/outline";
+import { Link } from "react-router-dom";
 
 const user = {
   name: "Tom Cook",
@@ -68,12 +69,12 @@ const Navbar = ({ children }) => {
                         type="button"
                         className="rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                       >
-                
+                <Link to= "/cart">
                         <ShoppingCartIcon
                           className="h-6 w-6"
                           aria-hidden="true"
                         />
-                       
+                      </Link> 
                       </button>
 
                       <span class="mb-5 -ml-3 inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
@@ -183,12 +184,13 @@ const Navbar = ({ children }) => {
                       className="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                     >
                       
-
+                        <Link to="/cart">
                       <ShoppingCartIcon
+                      
                         className="h-6 w-6"
                         aria-hidden="true"
                       />
-
+                      </Link>
                     
                     </button>
                     <span class="mb-7 -ml-3 inline-flex items-center rounded-md bg-blue-50 px-2 py-1 text-xs font-medium text-blue-700 ring-1 ring-inset ring-blue-700/10">
