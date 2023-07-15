@@ -15,6 +15,7 @@ import LoginPage from './pages/LoginPage';
 import SignUpPage from './pages/SignUpPage';
 import Cart from './features/cart/Cart';
 import CartPage from './pages/CartPage';
+import CheckOut from './pages/CheckOut';
 
 
 function App() {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
   {
     path: "/cart",
     element: <CartPage/>
+  },
+  {
+    path: "/checkout",
+    element: <CheckOut/>
   },
 
 
