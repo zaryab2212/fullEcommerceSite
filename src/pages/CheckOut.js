@@ -43,6 +43,7 @@ const addresses = [
     pincode: 42200,
     state: "punjab",
     phone: 343477777,
+    pincode: 329,
   },
   {
     name: "Jado",
@@ -51,6 +52,7 @@ const addresses = [
     pincode: 42200,
     state: "punjab",
     phone: 343477777,
+    pincode: 329,
   },
 ];
 
@@ -67,7 +69,7 @@ const CheckOut = () => {
             <form>
               <div className="space-y-12">
                 <div className="border-b border-gray-900/10 pb-12">
-                  <h2 className="text-base font-semibold leading-7 text-gray-900">
+                  <h2 className="text-base text-2xl font-semibold leading-7 text-gray-900">
                     Personal Information
                   </h2>
                   <p className="mt-1 text-sm leading-6 text-gray-600">
@@ -225,6 +227,23 @@ const CheckOut = () => {
                   </div>
                 </div>
 
+                {/* **********Address Section************ */}
+
+                <div className="mt-6 flex items-center justify-end gap-x-6">
+                <button
+                  type="button"
+                  className="text-sm font-semibold leading-6 text-gray-900"
+                >
+                  Reset
+                </button>
+                <button
+                  type="submit"
+                  className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                >
+                  Add Address
+                </button>
+              </div>
+
                 <div className="border-b border-gray-900/10 pb-12">
                   <h2 className="text-base font-semibold leading-7 text-gray-900">
                     Address
@@ -257,6 +276,9 @@ const CheckOut = () => {
                         <div className="hidden sm:flex sm:flex-col sm:items-end">
                           <p className="text-sm leading-6 text-gray-900">
                             {address.city}
+                          </p>
+                          <p className="text-sm leading-6 text-gray-900">
+                            {address.pincode}
                           </p>
                           <div className="mt-1 flex items-center gap-x-1.5">
                             <div className="flex-none rounded-full bg-emerald-500/20 p-1">
@@ -319,20 +341,7 @@ const CheckOut = () => {
                 </div>
               </div>
 
-              <div className="mt-6 flex items-center justify-end gap-x-6">
-                <button
-                  type="button"
-                  className="text-sm font-semibold leading-6 text-gray-900"
-                >
-                  Cancel
-                </button>
-                <button
-                  type="submit"
-                  className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                >
-                  Save
-                </button>
-              </div>
+        
             </form>
           </div>
           <div className="lg:col-span-2">
@@ -406,10 +415,10 @@ const CheckOut = () => {
                 </p>
                 <div className="mt-6">
                   <Link
-                    to="/checkout"
+                    to="/pay"
                     className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
                   >
-                    Checkout
+                    Pay Now
                   </Link>
                 </div>
                 <div className="mt-6 flex justify-center text-center text-sm text-gray-500">

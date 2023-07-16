@@ -16,6 +16,7 @@ import SignUpPage from './pages/SignUpPage';
 import Cart from './features/cart/Cart';
 import CartPage from './pages/CartPage';
 import CheckOut from './pages/CheckOut';
+import ProductDetailPage from './pages/ProductDetailPage';
 
 
 function App() {
@@ -43,7 +44,10 @@ const router = createBrowserRouter([
     path: "/checkout",
     element: <CheckOut/>
   },
-
+  {
+    path: "/product-detail",
+    element: <ProductDetailPage/>
+  },
 
 
 ]);
